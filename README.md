@@ -24,6 +24,16 @@ sdsd
 
 sdsdsd
 
+```cssharp
+int x = 1
+int y = x + 1
+Console.Writeline(x);
+```
+a teraz kliknij aby zobaczyć więcej
 
+-a props 1
+-a propos 2
 
+1.po pierwsze 
+2.po drugie
 
