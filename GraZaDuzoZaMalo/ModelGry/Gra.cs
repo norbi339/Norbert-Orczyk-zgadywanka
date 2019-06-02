@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ModelGry
 {
-    public class Gra
+    public partial class Gra
     {
         // inner types
         public enum Odpowiedz { ZaMalo = -1, ZaDuzo = 0, Trafiono = 1 }
@@ -38,20 +39,24 @@ namespace ModelGry
             ZakresDo = Math.Max(a,b);
             wylosowana = Losuj(ZakresOd, ZakresDo);
             Stan = StanGry.Trwa;
+            historia = new List<Ruch>();
         }
 
         public Odpowiedz Ocena(int propozycja )
         {
+            Odpowiedz odp;
             LicznikRuchow++;
             if (propozycja < wylosowana)
-                return Odpowiedz.ZaMalo;
+                odp = Odpowiedz.ZaMalo;
             else if (propozycja > wylosowana)
-                return Odpowiedz.ZaDuzo;
+                odp = Odpowiedz.ZaDuzo;
             else
             {
                 Stan = StanGry.Odgadnieta;
-                return Odpowiedz.Trafiono;
+                odp = Odpowiedz.Trafiono;
             }
+            historia.Add(new Ruch(propozycja, odp));
+            return odp;
         }
 
         public void Poddaj()
