@@ -37,9 +37,37 @@ namespace GraGUI
             textBoxZakresOd.Enabled = false;
             textBoxZakresDo.Enabled = false;
 
+            groupBoxWylosowano.Visible = true;
+            buttonLosuj.Enabled = false;
+
             // pokazać następne elementy formularza
-            // przycisk przerwij/poddaj
 
         }
+
+        private void groupBoxLosuj_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBoxWylosowano_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void buttonSprawdz_Click(object sender, EventArgs e)
+        {
+            int propozycja = int.Parse(textBoxWylosowana.Text);
+            g.Ocena(propozycja);
+        }
+
+
+        // przycisk przerwij/poddaj
+
+        private void buttonPrzerwij_Click(object sender, EventArgs e)
+        {
+            g.Poddaj();
+        }
+
     }
 }
