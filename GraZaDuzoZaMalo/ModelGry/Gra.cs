@@ -42,6 +42,11 @@ namespace ModelGry
             historia = new List<Ruch>();
         }
 
+        public IReadOnlyList<Ruch> getRuchy()
+        {
+            return Historia;
+        }
+
         public Odpowiedz Ocena(int propozycja )
         {
             Odpowiedz odp;
