@@ -69,7 +69,7 @@ namespace GraGUI
             }
             catch (FormatException)
             {
-                MessageBox.Show("Podaj zakres.");
+                MessageBox.Show("Musisz podać liczbę całkowitą.");
             }
         }
 
@@ -143,6 +143,11 @@ namespace GraGUI
         {
             Form2 form2 = new Form2();
             form2.Show();
+        }
+
+        private void textBoxZakresOd_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -37,6 +37,9 @@
             this.labelZakresDo = new System.Windows.Forms.Label();
             this.labelZakresOd = new System.Windows.Forms.Label();
             this.groupBoxWylosowano = new System.Windows.Forms.GroupBox();
+            this.Odpowiedz = new System.Windows.Forms.Label();
+            this.czas = new System.Windows.Forms.Label();
+            this.buttonSprawdz = new System.Windows.Forms.Button();
             this.textBoxWylosowana = new System.Windows.Forms.TextBox();
             this.buttonPrzerwij = new System.Windows.Forms.Button();
             this.groupBoxPrzerwij = new System.Windows.Forms.GroupBox();
@@ -48,10 +51,7 @@
             this.czasGry = new System.Windows.Forms.Label();
             this.buttonHistoria = new System.Windows.Forms.Button();
             this.buttonInfo = new System.Windows.Forms.Button();
-            this.buttonSprawdz = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.czas = new System.Windows.Forms.Label();
-            this.Odpowiedz = new System.Windows.Forms.Label();
             this.groupBoxLosuj.SuspendLayout();
             this.groupBoxWylosowano.SuspendLayout();
             this.groupBoxPrzerwij.SuspendLayout();
@@ -106,6 +106,7 @@
             this.textBoxZakresOd.Name = "textBoxZakresOd";
             this.textBoxZakresOd.Size = new System.Drawing.Size(100, 20);
             this.textBoxZakresOd.TabIndex = 2;
+            this.textBoxZakresOd.TextChanged += new System.EventHandler(this.textBoxZakresOd_TextChanged);
             // 
             // labelZakresDo
             // 
@@ -139,6 +140,34 @@
             this.groupBoxWylosowano.Text = "Liczba wylosowana. Odgadnij ją!";
             this.groupBoxWylosowano.Visible = false;
             this.groupBoxWylosowano.Enter += new System.EventHandler(this.groupBoxWylosowano_Enter);
+            // 
+            // Odpowiedz
+            // 
+            this.Odpowiedz.AutoSize = true;
+            this.Odpowiedz.Location = new System.Drawing.Point(18, 70);
+            this.Odpowiedz.Name = "Odpowiedz";
+            this.Odpowiedz.Size = new System.Drawing.Size(60, 13);
+            this.Odpowiedz.TabIndex = 6;
+            this.Odpowiedz.Text = "Odpowiedź";
+            // 
+            // czas
+            // 
+            this.czas.AutoSize = true;
+            this.czas.Location = new System.Drawing.Point(209, 16);
+            this.czas.Name = "czas";
+            this.czas.Size = new System.Drawing.Size(35, 13);
+            this.czas.TabIndex = 5;
+            this.czas.Text = "label2";
+            // 
+            // buttonSprawdz
+            // 
+            this.buttonSprawdz.Location = new System.Drawing.Point(212, 42);
+            this.buttonSprawdz.Name = "buttonSprawdz";
+            this.buttonSprawdz.Size = new System.Drawing.Size(75, 23);
+            this.buttonSprawdz.TabIndex = 4;
+            this.buttonSprawdz.Text = "Sprawdź";
+            this.buttonSprawdz.UseVisualStyleBackColor = true;
+            this.buttonSprawdz.Click += new System.EventHandler(this.buttonSprawdz_Click);
             // 
             // textBoxWylosowana
             // 
@@ -245,34 +274,6 @@
             this.buttonInfo.Text = "Info";
             this.buttonInfo.UseVisualStyleBackColor = true;
             this.buttonInfo.Click += new System.EventHandler(this.buttonInfo_Click);
-            // 
-            // buttonSprawdz
-            // 
-            this.buttonSprawdz.Location = new System.Drawing.Point(212, 42);
-            this.buttonSprawdz.Name = "buttonSprawdz";
-            this.buttonSprawdz.Size = new System.Drawing.Size(75, 23);
-            this.buttonSprawdz.TabIndex = 4;
-            this.buttonSprawdz.Text = "Sprawdź";
-            this.buttonSprawdz.UseVisualStyleBackColor = true;
-            this.buttonSprawdz.Click += new System.EventHandler(this.buttonSprawdz_Click);
-            // 
-            // czas
-            // 
-            this.czas.AutoSize = true;
-            this.czas.Location = new System.Drawing.Point(209, 16);
-            this.czas.Name = "czas";
-            this.czas.Size = new System.Drawing.Size(35, 13);
-            this.czas.TabIndex = 5;
-            this.czas.Text = "label2";
-            // 
-            // Odpowiedz
-            // 
-            this.Odpowiedz.AutoSize = true;
-            this.Odpowiedz.Location = new System.Drawing.Point(18, 70);
-            this.Odpowiedz.Name = "Odpowiedz";
-            this.Odpowiedz.Size = new System.Drawing.Size(60, 13);
-            this.Odpowiedz.TabIndex = 6;
-            this.Odpowiedz.Text = "Odpowiedź";
             // 
             // Form1
             // 

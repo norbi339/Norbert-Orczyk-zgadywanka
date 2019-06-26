@@ -23,5 +23,10 @@ namespace GraGUI
             dataGridView1.Columns[0].DataPropertyName = "propozycja";
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

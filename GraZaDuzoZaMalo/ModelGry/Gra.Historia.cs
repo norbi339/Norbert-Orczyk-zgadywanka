@@ -13,9 +13,9 @@ namespace ModelGry
         //inner class
         public class Ruch
         {
-            public readonly int propozycja;
-            public readonly Odpowiedz odpowiedz;
-            public readonly DateTime kiedy;
+            public int propozycja { get; }
+            public Odpowiedz odpowiedz { get; }
+            public DateTime kiedy { get; }
 
             public Ruch(int prop, Odpowiedz odp)
             {

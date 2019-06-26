@@ -39,6 +39,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(508, 258);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Form3
             // 
@@ -56,5 +57,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource stateBindingSource;
+        private System.Windows.Forms.BindingSource graBindingSource;
+        private System.Windows.Forms.BindingSource odpowiedzBindingSource;
     }
 }
